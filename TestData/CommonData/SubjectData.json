@@ -1,0 +1,51 @@
+[
+    {
+        "Class":" Class 4 ",
+        "TaskSubject":"TELUGU",
+        "EnglishTaskSubject":"ENGLISH",
+        "HindiSubject":"HINDI",
+        "AcivityType":"Practice",
+        "AcivityTypes": "Assessment,Introduction",
+
+        "TeluguTitle":"ఖాలీలు పూరించడం",
+        "TeluguInstructions":"పట్టికలోని అక్షరాలతో పదాలు తయారు చేయండి",
+        "EnglishTitle":"Fill in the blanks",
+        "EnglishInstructions":"Drag the source to required blanks",
+        
+        "RearrangingTeluguTitle":"సరైన క్రమంలో అమర్చడం",
+        "RearrangingTeluguInstructions":"కింది గేయ పాదాలు చదివి సరియగు క్రమంలో అమర్చండి.",
+        "RearrangingEnglishTitle":"Student need to rearrange the choices",
+        "RearrangingEnglishInstructions":"All Questions need to be answered",
+        
+        "TrueorfalseTeluguTitle":"తప్పు / ఒప్పు లను గుర్తించడం",
+        "TrueorfalseTeluguInstructions":"కింది వస్తువులు గమనించండి",
+        "TrueorfalseEnglishTitle":"True or False Questions",
+        "TrueorfalseEnglishInstructions":"Choose the correct answer",
+
+        "mcqTeluguTitle":"బహులైచ్ఛిక ప్రశ్నలు",
+        "mcqTeluguInstructions":"సరైన జవాబు ని ఎంచుకోండి",
+        "mcqEnglishTitle":"Multiple choice questions",
+        "mcqEnglishInstructions":"Choose the correct answer",
+
+        "sortingTeluguTitle":"బహులైచ్ఛిక ప్రశ్నలు",
+        "sortingTeluguInstructions":"సరైన జవాబు ని ఎంచుకోండి",
+        "sortingEnglishTitle":"Multiple choice questions",
+        "sortingEnglishInstructions":"Choose the correct answer",
+
+        "tappingTeluguTitle":"బహులైచ్ఛిక ప్రశ్నలు",
+        "tappingTeluguInstructions":"సరైన జవాబు ని ఎంచుకోండి",
+        "tappingEnglishTitle":"Multiple choice questions",
+        "tappingEnglishInstructions":"Choose the correct answer",
+
+        "matchingTeluguTitle":"జతపరచండి",
+        "matchingTeluguInstructions":"కింది పదాలకు అర్థాలను జతపరచండి",
+        "matchingEnglishTitle":"Match the following options",
+        "matchingEnglishInstructions":"Match the corrct answer",
+
+        "Courseclass":"Class 1 ",
+        "ReviewerUsername":"venu",
+        "Reviewerpassword":"password",
+        "ApproverUsername":"veena",
+        "Approverpassword":"password"
+    }
+]

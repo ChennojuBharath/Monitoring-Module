@@ -1,0 +1,26 @@
+[
+  {
+    "Class": "Class Room1",
+    "Subject": "EVS",
+    "name1": "Monitor",
+    "quantity1": 10,
+     "name2": "CPU",
+    "quantity2": 10,
+     "name3": "Books",
+    "quantity3": 10,
+     "name4": "Tables",
+    "quantity4": 10,
+     "name5": "Chairs",
+    "quantity5": 10,
+     "name6": "Glasses",
+    "quantity6": 10,
+     "name7": "Squares",
+    "quantity7": 10,
+     "name8": "Pencils",
+    "quantity8": 10,
+     "name9": "Pens",
+    "quantity9": 10,
+     "name10": "Scales",
+    "quantity10": 10
+  }
+]
