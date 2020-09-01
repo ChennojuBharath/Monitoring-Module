@@ -1,4 +1,4 @@
-import { browser, element, by, ExpectedConditions } from 'protractor';
+import { browser, element, by} from 'protractor';
 import { BrowserUtils } from '../utils/browser.utils';
 import { dataProvider } from '../TestData/dataprovider'
 var path = require("path");
