@@ -20,6 +20,9 @@ export class loginPage {
     profileicon(){
         return element(by.xpath("//i[text()='person_pin']"));     
     }
+     profileiconmonitoring(){
+        return element(by.xpath("//div[@class='nav-profile-name']"));     
+    }
     logout(){
         return element(by.xpath("//button[@role='menuitem']")); 
     }
@@ -48,10 +51,8 @@ export class loginPage {
         this.keycloakusername().sendKeys(keycloaklogindata.keycloakusername);
         this.keycloakpassword().sendKeys(keycloaklogindata.keycloakpassword);
         this.keycloakloginbtn().click();
-        browser.sleep(2000);
-        // browser.getCurrentUrl().then((url)=> {
-        //     expect(url).toContain('all-courses')
-        //    })
+        browser.sleep(15000);
+
     }
 
 }

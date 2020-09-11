@@ -10,9 +10,10 @@ describe('Verify Login Page', () => {
     it('logout from application', () => {
         browser.ignoreSynchronization = true
         browser.sleep(2000);
-        loginPg.profileicon().click();
+        loginPg.profileiconmonitoring().click();
         browser.sleep(2000);
         loginPg.logout().click();
+          browser.sleep(5000);
         loginPg.keycloakusername().isDisplayed().then(function (dis) {
             expect(dis).toBe(true, 'logout from application is successful')
          })

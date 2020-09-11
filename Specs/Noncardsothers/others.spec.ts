@@ -6,10 +6,10 @@ describe('KIT Creation Page', () => {
     it('Verify others can  be created', () => {
   others.CreateOthersnoncards();
       });
-    it('Verify others can  be updated', () => {
+    it('Verify others  details can  be updated', () => {
       others.Updateotherscardsdetails();
       });
-    it('Verify others can  be updated', () => {
+    it('Verify others details can  be deleted', () => {
         others.Deleteothersdetals();
       })
 })

@@ -15,33 +15,43 @@ export class othersDetails {
     logoname() {
         return element(by.xpath("//input[@formcontrolname='logoName']"));
     }
-    itemname() {
-        return element(by.xpath("//input[@formcontrolname='itemName']"));
-    }
-    noofitems() {
-        return element(by.xpath("//input[@formcontrolname='noOfItems']"));
-    }
     addbtn() {
         return element(by.xpath("//span[contains(text(),'Add')]"));
     }
     savebtn() {
         return element(by.xpath("//span[contains(text(),'Save')]"));
     }
-editicon(){
-    return element(by.xpath("(//img[@src='assets/images/Union.svg'])[1]"));
-}
-deleteicon(){
-    return element(by.xpath("(//img[@src='assets/images/delete.svg'])[1]"));
-}
-  Updatebtn(){
-    return element(by.xpath("//span[contains(text(),'Update')]"));
-}
- Cancelbtn(){
-    return element(by.xpath("//span[contains(text(),'Cancel')]"));
-} 
- Confirmbtn(){
-    return element(by.xpath("//span[contains(text(),'Confirm')]"));
-}
+    editicon() {
+        return element(by.xpath("(//img[@src='assets/images/Union.svg'])[1]"));
+    }
+    deleteicon() {
+        return element(by.xpath("(//img[@src='assets/images/delete.svg'])[1]"));
+    }
+    Updatebtn() {
+        return element(by.xpath("//span[contains(text(),'Update')]"));
+    }
+    Cancelbtn() {
+        return element(by.xpath("//span[contains(text(),'Cancel')]"));
+    }
+    Confirmbtn() {
+        return element(by.xpath("//span[contains(text(),'Confirm')]"));
+    }
+    Confirmokbtn() {
+        return element(by.xpath("//span[contains(text(),'Ok')]"))
+    }
+    itemname() {
+        return element(by.xpath("//input[@formcontrolname='itemName']"));
+    }
+   
+    noofitems() {
+        return element(by.xpath("//input[@formcontrolname='noOfItems']"));
+    }
+     updateitems() {
+        return element(by.xpath("//input[@name='count']"));
+    }
+      updatename() {
+        return element(by.xpath("//input[@name='subName']"));
+    }
     noncardstab() {
         return element(by.xpath("//div[contains(text(),'Non Cards')]"));
     }
@@ -55,25 +65,22 @@ deleteicon(){
         return element(by.xpath("//span[contains(text(),'Others')]"));
     }
 
-CreateOthersnoncards() {
+    CreateOthersnoncards() {
         browser.ignoreSynchronization = true
         var dataRecs = dataProvider.getJsonDataFromFile('./TestData/KitData/EnglishData.json', null)
         if (dataRecs && dataRecs.length > 0) {
             dataRecs.forEach(record => {
-                browser.sleep(5000);
-                BrowserUtils.scrollIntoView(by.xpath("//div[@ng-reflect-router-link][contains(text(),'Kit Creation')]"));
+                browser.sleep(10000);
                 this.Kitcreationlink().click();
-                browser.sleep(2000);
+                browser.sleep(3000);
                 this.noncardstab().click();
                 browser.sleep(2000);
-                var Classselection = by.xpath("//option[contains(text(),'" + record["Class"] + "')]");
+                BrowserUtils.selectDropdownValue(by.xpath("//select[contains(@class,'select-drop')]"), record["Class"]);
                 browser.sleep(2000);
-                BrowserUtils.clickOnElement(Classselection);
-                browser.sleep(1000);
                 var subjectselection = by.xpath("//span[contains(text(),'" + record["Subject"] + "')]");
                 browser.sleep(2000);
                 BrowserUtils.clickOnElement(subjectselection);
-                browser.sleep(1000);
+                browser.sleep(3000);
                 this.Others().click();
                 browser.sleep(1000);
                 this.CreatKitbtn().click();
@@ -82,114 +89,112 @@ CreateOthersnoncards() {
                 BrowserUtils.enterText(by.xpath("//input[@formcontrolname='noOfItems']"), record["Othersnoofitems1"]);
                 this.addbtn().click();
                 browser.sleep(1000);
-                  BrowserUtils.enterText(by.xpath("//input[@formcontrolname='itemName']"), record["Othersitemname2"]);
+                BrowserUtils.enterText(by.xpath("//input[@formcontrolname='itemName']"), record["Othersitemname2"]);
                 BrowserUtils.enterText(by.xpath("//input[@formcontrolname='noOfItems']"), record["Othersnoofitems2"]);
                 this.addbtn().click();
                 browser.sleep(1000);
-                  BrowserUtils.enterText(by.xpath("//input[@formcontrolname='itemName']"), record["Othersitemname3"]);
+                BrowserUtils.enterText(by.xpath("//input[@formcontrolname='itemName']"), record["Othersitemname3"]);
                 BrowserUtils.enterText(by.xpath("//input[@formcontrolname='noOfItems']"), record["Othersnoofitems3"]);
                 this.addbtn().click();
                 browser.sleep(1000);
-                  BrowserUtils.enterText(by.xpath("//input[@formcontrolname='itemName']"), record["Othersitemname4"]);
+                BrowserUtils.enterText(by.xpath("//input[@formcontrolname='itemName']"), record["Othersitemname4"]);
                 BrowserUtils.enterText(by.xpath("//input[@formcontrolname='noOfItems']"), record["Othersnoofitems4"]);
                 this.addbtn().click();
                 browser.sleep(1000);
-                  BrowserUtils.enterText(by.xpath("//input[@formcontrolname='itemName']"), record["Othersitemname5"]);
+                BrowserUtils.enterText(by.xpath("//input[@formcontrolname='itemName']"), record["Othersitemname5"]);
                 BrowserUtils.enterText(by.xpath("//input[@formcontrolname='noOfItems']"), record["Othersnoofitems5"]);
                 this.addbtn().click();
                 browser.sleep(1000);
-                  BrowserUtils.enterText(by.xpath("//input[@formcontrolname='itemName']"), record["Othersitemname6"]);
+                BrowserUtils.enterText(by.xpath("//input[@formcontrolname='itemName']"), record["Othersitemname6"]);
                 BrowserUtils.enterText(by.xpath("//input[@formcontrolname='noOfItems']"), record["Othersnoofitems6"]);
                 this.addbtn().click();
                 browser.sleep(1000);
-                  BrowserUtils.enterText(by.xpath("//input[@formcontrolname='itemName']"), record["Othersitemname7"]);
+                BrowserUtils.enterText(by.xpath("//input[@formcontrolname='itemName']"), record["Othersitemname7"]);
                 BrowserUtils.enterText(by.xpath("//input[@formcontrolname='noOfItems']"), record["Othersnoofitems7"]);
                 this.addbtn().click();
                 browser.sleep(1000);
-                  BrowserUtils.enterText(by.xpath("//input[@formcontrolname='itemName']"), record["Othersitemname8"]);
+                BrowserUtils.enterText(by.xpath("//input[@formcontrolname='itemName']"), record["Othersitemname8"]);
                 BrowserUtils.enterText(by.xpath("//input[@formcontrolname='noOfItems']"), record["Othersnoofitems8"]);
                 this.addbtn().click();
                 browser.sleep(1000);
-                  BrowserUtils.enterText(by.xpath("//input[@formcontrolname='itemName']"), record["Othersitemname9"]);
+                BrowserUtils.enterText(by.xpath("//input[@formcontrolname='itemName']"), record["Othersitemname9"]);
                 BrowserUtils.enterText(by.xpath("//input[@formcontrolname='noOfItems']"), record["Othersnoofitems9"]);
                 this.addbtn().click();
                 browser.sleep(1000);
-                  BrowserUtils.enterText(by.xpath("//input[@formcontrolname='itemName']"), record["Othersitemname10"]);
+                BrowserUtils.enterText(by.xpath("//input[@formcontrolname='itemName']"), record["Othersitemname10"]);
                 BrowserUtils.enterText(by.xpath("//input[@formcontrolname='noOfItems']"), record["Othersnoofitems10"]);
                 this.addbtn().click();
                 browser.sleep(1000);
-               BrowserUtils.scrollIntoView(by.xpath("//span[contains(text(),'Save')]"));
+                BrowserUtils.scrollIntoView(by.xpath("//span[contains(text(),'Save')]"));
                 this.savebtn().click();
-                browser.sleep(5000);
+                browser.sleep(3000);
                 this.CreatKitbtn().isDisplayed().then(function (dis) {
                     expect(dis).toBe(true, 'Othersnoncards is created successfully')
                 })
             })
         }
     }
-   Updateotherscardsdetails(){
+    Updateotherscardsdetails() {
         browser.ignoreSynchronization = true
         var dataRecs = dataProvider.getJsonDataFromFile('./TestData/KitData/EnglishData.json', null)
         if (dataRecs && dataRecs.length > 0) {
             dataRecs.forEach(record => {
-                var Classsroomelection = by.xpath("//select//option[text()='" + record["Class"] + "']");
                 browser.sleep(1000);
-                BrowserUtils.clickOnElement(Classsroomelection);
-                browser.sleep(5000);
-                this.editicon().click();
-                browser.sleep(8000);
-                this.itemname().clear();
+                 this.editicon().click();
+                 browser.sleep(1000);
+                this.updatename().clear();
+               browser.sleep(1000);
+                BrowserUtils.enterText(by.xpath("//input[@name='subName']"), record["Othersitemname9"]);
                 browser.sleep(1000);
-                 BrowserUtils.enterText(by.xpath("//input[@formcontrolname='itemName']"), record["Othersitemname10"]);
-                 browser.sleep(1000);
-                 this.noofitems().clear();
+                this.updateitems().clear();
                 browser.sleep(1000);
-                 BrowserUtils.enterText(by.xpath("//input[@formcontrolname='noOfItems']"), record["Aidsnoofitems8"]);  
-                 browser.sleep(1000);
-                 this.Cancelbtn().click();
-                 browser.sleep(4000);
-                  this.editicon().click();
-                  browser.sleep(8000);
-                  this.itemname().clear();
-                  browser.sleep(1000);
-                 BrowserUtils.enterText(by.xpath("//input[@formcontrolname='itemName']"), record["Othersitemname10"]);
-                 browser.sleep(1000);
-                 this.noofitems().clear();
+                BrowserUtils.enterText(by.xpath("//input[@name='count']"), record["Aidsnoofitems8"]);
                 browser.sleep(1000);
-                 BrowserUtils.enterText(by.xpath("//input[@formcontrolname='noOfItems']"), record["Aidsnoofitems8"]);  
+                this.Cancelbtn().click();
+                browser.sleep(1000);
+                 this.editicon().click();
                  browser.sleep(1000);
-                 this.Updatebtn().click();
-                 browser.sleep(5000);
-                  this.CreatKitbtn().isDisplayed().then(function (dis) {
-                expect(dis).toBe(true, 'others noncards is updated successfully')
+                this.updatename().clear();
+               browser.sleep(1000);
+                BrowserUtils.enterText(by.xpath("//input[@name='subName']"), record["Othersitemname9"]);
+                browser.sleep(1000);
+                this.updateitems().clear();
+                browser.sleep(1000);
+                BrowserUtils.enterText(by.xpath("//input[@name='count']"), record["Aidsnoofitems8"]);
+                browser.sleep(1000);
+                this.Updatebtn().click();
+                browser.sleep(1000);
+                this.Confirmbtn().click();
+                browser.sleep(3000);
+                this.Confirmokbtn().click();
+                browser.sleep(3000);
+                this.CreatKitbtn().isDisplayed().then(function (dis) {
+                    expect(dis).toBe(true, 'others noncards is updated successfully')
+                })
             })
-            })
-        } 
+        }
     }
-Deleteothersdetals(){
-    browser.ignoreSynchronization = true
+    Deleteothersdetals() {
+        browser.ignoreSynchronization = true
         var dataRecs = dataProvider.getJsonDataFromFile('./TestData/KitData/EnglishData.json', null)
         if (dataRecs && dataRecs.length > 0) {
             dataRecs.forEach(record => {
-                var Classsroomelection = by.xpath("//select//option[text()='" + record["Class"] + "']");
-                browser.sleep(1000);
-                BrowserUtils.clickOnElement(Classsroomelection);
-                browser.sleep(5000);
+                 browser.sleep(3000);
                 this.deleteicon().click();
-                browser.sleep(3000);
-               this.Cancelbtn().click();
-                browser.sleep(3000);
-                 this.deleteicon().click();
-                browser.sleep(3000);
+                browser.sleep(1000);
+                this.Cancelbtn().click();
+               browser.sleep(1000);
+                this.deleteicon().click();
+                browser.sleep(1000);
                 this.Confirmbtn().click();
-                 browser.sleep(5000);
-                  this.CreatKitbtn().isDisplayed().then(function (dis) {
-                expect(dis).toBe(true, 'othersnoncards is deleted successfully')
+                browser.sleep(3000);
+                this.CreatKitbtn().isDisplayed().then(function (dis) {
+                    expect(dis).toBe(true, 'othersnoncards is deleted successfully')
+                })
             })
-            })
-        } 
-}
+        }
+    }
 
-   
-    
+
+
 }
